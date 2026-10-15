@@ -1,0 +1,578 @@
+.service-details-page .service-detail-hero {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--surface, #f5f7f8);
+  padding: 80px 20px
+}
+
+.service-details-page .hero-content {
+  max-width: 850px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center
+}
+
+.service-details-page .hero-content p {
+  max-width: 700px;
+  margin: 0 auto 24px
+}
+
+.service-details-page .hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap
+}
+
+.service-detail-overview .section-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 36px
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px
+}
+
+.service-detail-card {
+  padding: 30px;
+  border: 1px solid var(--border, #dce3e8);
+  border-radius: 18px;
+  background: var(--surface, #fff);
+  height: 100%
+}
+
+.service-detail-card>svg {
+  width: 30px;
+  height: 30px;
+  color: var(--brand-gold);
+  margin-bottom: 18px
+}
+
+.service-detail-card h3 {
+  margin: 0 0 12px
+}
+
+.service-detail-card p {
+  margin: 0;
+  color: var(--muted, #667085);
+  line-height: 1.7
+}
+
+.service-detail-cta {
+  text-align: center;
+  padding: 70px 0;
+  background: var(--surface, #f5f7f8)
+}
+
+.service-detail-cta .products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px
+}
+
+.service-detail-cta p {
+  margin: 0 0 12px
+}
+
+html.dark .service-detail-card {
+  background: var(--dark-surface, #202833);
+  border-color: var(--dark-border, #3a4553)
+}
+
+html.dark .service-detail-card p {
+  color: var(--dark-muted, #cbd5e1)
+}
+
+@media(max-width:768px) {
+  .service-detail-grid {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .service-details-page .service-detail-hero {
+    min-height: 380px
+  }
+}
+
+@media(max-width:360px) {
+  .service-detail-grid {
+    grid-template-columns: 1fr
+  }
+
+  .service-details-page .hero-actions {
+    flex-direction: column;
+    width: 100%
+  }
+
+  .service-details-page .hero-actions .btn {
+    width: 100%
+  }
+}
+
+/* Expanded service details page, aligned with the site's section system */
+.service-detail-process {
+  padding: 78px 0;
+  background: var(--bg, #fff)
+}
+
+.service-detail-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px
+}
+
+.service-detail-steps article {
+  display: flex;
+  gap: 18px;
+  padding: 26px;
+  border: 1px solid var(--border, #dce3e8);
+  border-radius: 18px;
+  background: var(--surface, #fff);
+  box-shadow: var(--shadow-soft, 0 8px 25px rgba(0, 0, 0, .05))
+}
+
+.service-detail-steps article>span {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--brand-gold);
+  letter-spacing: .04em
+}
+
+.service-detail-steps h3 {
+  margin: 0 0 9px;
+  color: var(--text)
+}
+
+.service-detail-steps p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75
+}
+
+.service-detail-benefits {
+  padding: 78px 0;
+  background: var(--surface-alt, #f5f7f8)
+}
+
+.service-benefit-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px;
+  align-items: center
+}
+
+.service-benefit-copy h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin: 12px 0 16px;
+  color: var(--text)
+}
+
+.service-benefit-copy p {
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 24px
+}
+
+.service-benefit-list {
+  display: grid;
+  gap: 14px
+}
+
+.service-benefit-list>div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border, #dce3e8)
+}
+
+.service-benefit-list svg {
+  width: 28px;
+  height: 28px;
+  color: var(--brand-gold);
+  flex: none
+}
+
+.service-benefit-list strong,
+.service-benefit-list small {
+  display: block
+}
+
+.service-benefit-list strong {
+  color: var(--text);
+  margin-bottom: 4px
+}
+
+.service-benefit-list small {
+  color: var(--muted);
+  line-height: 1.5
+}
+
+html.dark .service-detail-steps article,
+html.dark .service-benefit-list>div {
+  background: var(--dark-surface, #202833);
+  border-color: var(--dark-border, #3a4553)
+}
+
+@media(max-width:768px) {
+  .service-detail-steps {
+    grid-template-columns: 1fr
+  }
+
+  .service-benefit-layout {
+    grid-template-columns: 1fr;
+    gap: 30px
+  }
+}
+
+@media(max-width:360px) {
+
+  .service-detail-process,
+  .service-detail-benefits {
+    padding: 52px 0
+  }
+
+  .service-detail-steps article {
+    padding: 18px
+  }
+
+  .service-benefit-layout {
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box
+  }
+}
+
+/* Match the height and centered composition of the site's standard hero. */
+.service-details-page .service-detail-hero {
+  min-height: 620px !important;
+  padding: 80px 20px !important;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-image: linear-gradient(0deg, rgba(10, 18, 28, .68), rgba(10, 18, 28, .48)), url('https://i.pinimg.com/1200x/5f/eb/20/5feb20c7f6390f0543bce8392883ee5b.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.service-details-page .service-detail-hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 18, 28, .22);
+  z-index: -1;
+  pointer-events: none
+}
+
+.service-details-page .service-detail-hero .hero-content {
+  width: min(100%, 1180px);
+  padding: 60px 20px !important;
+  box-sizing: border-box;
+  align-items: center !important;
+  text-align: center !important;
+  margin: auto !important;
+}
+
+.service-details-page .service-detail-hero h1,
+.service-details-page .service-detail-hero p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  color: #fff !important
+}
+
+.service-details-page .service-detail-hero .eyebrow {
+  justify-content: center;
+  color: var(--brand-gold) !important
+}
+
+.service-details-page .service-detail-hero .hero-actions {
+  justify-content: center !important;
+  align-items: center !important
+}
+
+.service-detail-card,
+.service-detail-steps article,
+.service-benefit-list>div {
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  overflow: hidden
+}
+
+.service-detail-card:hover,
+.service-detail-steps article:hover,
+.service-benefit-list>div:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 38px rgba(20, 35, 50, .14);
+  border-color: var(--brand-gold, #c9a66b)
+}
+
+.service-detail-card>svg,
+.service-benefit-list svg {
+  transition: transform .3s ease
+}
+
+.service-detail-card:hover>svg,
+.service-benefit-list>div:hover svg {
+  transform: scale(1.12) rotate(-4deg)
+}
+
+.service-benefit-copy {
+  position: relative;
+  isolation: isolate
+}
+
+.service-benefit-copy:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 190px;
+  margin-top: 26px;
+  border-radius: 18px;
+  background: url('https://i.pinimg.com/736x/36/f5/80/36f580e348d32e248e2e7957c42e2ecf.jpg') center 55%/cover no-repeat;
+  box-shadow: 0 12px 28px rgba(20, 35, 50, .12);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.service-benefit-copy:hover:after {
+  transform: scale(1.025);
+  filter: saturate(1.12)
+}
+
+@media(max-width:768px) {
+  .service-details-page .service-detail-hero {
+    min-height: 520px !important
+  }
+}
+
+@media(max-width:360px) {
+  .service-details-page .service-detail-hero {
+    min-height: 500px !important;
+    padding: 48px 14px !important
+  }
+
+  .service-details-page .service-detail-hero .hero-content {
+    padding: 42px 8px !important
+  }
+
+  .service-benefit-copy:after {
+    height: 150px
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .service-detail-card,
+  .service-detail-steps article,
+  .service-benefit-list>div,
+  .service-benefit-copy:after,
+  .service-detail-card>svg,
+  .service-benefit-list svg {
+    transition: none !important
+  }
+}
+
+/* Final service-details-only refinements */
+.service-details-page .service-detail-hero {
+  min-height: var(--hero-height, 520px) !important;
+  height: auto !important;
+  padding: 72px 20px !important
+}
+
+.service-details-page .service-detail-hero .hero-content {
+  padding: 38px 20px !important
+}
+
+.service-details-page .service-detail-hero .btn,
+.service-details-page .service-detail-cta .btn,
+.service-details-page .service-benefit-copy .btn {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease
+}
+
+.service-details-page .service-detail-hero .btn:hover,
+.service-details-page .service-detail-cta .btn:hover,
+.service-details-page .service-benefit-copy .btn:hover {
+  transform: translateY(-2px)
+}
+
+.service-details-page .service-detail-overview,
+.service-details-page .service-detail-process,
+.service-details-page .service-detail-benefits,
+.service-details-page .service-detail-cta {
+  padding-left: clamp(18px, 4vw, 64px);
+  padding-right: clamp(18px, 4vw, 64px);
+  box-sizing: border-box
+}
+
+.service-details-page .service-detail-benefits .service-benefit-layout {
+  align-items: stretch
+}
+
+.service-details-page .service-benefit-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center
+}
+
+.service-details-page .service-benefit-copy p {
+  max-width: 560px
+}
+
+.service-details-page .service-benefit-copy:after {
+  height: 100%;
+  min-height: 340px;
+  max-height: 520px;
+  flex: 1;
+  margin-top: 26px
+}
+
+.service-details-page .service-benefit-list {
+  height: 100%;
+  align-content: center
+}
+
+.service-details-page .service-detail-card img,
+.service-details-page .service-benefit-copy:after {
+  transition: transform .35s ease, filter .35s ease
+}
+
+.service-details-page .service-detail-card:hover {
+  transform: translateY(-7px) scale(1.01)
+}
+
+@media(max-width:768px) {
+  .service-details-page .service-detail-hero {
+    min-height: 420px !important
+  }
+
+  .service-details-page .service-benefit-copy:after {
+    height: 220px;
+    min-height: 220px
+  }
+
+  .service-details-page .service-detail-overview,
+  .service-details-page .service-detail-process,
+  .service-details-page .service-detail-benefits,
+  .service-details-page .service-detail-cta {
+    padding-left: 18px;
+    padding-right: 18px
+  }
+}
+
+
+/* Why ComfortStep: clean split layout with copy on the left and a tall image on the right. */
+.service-details-page .service-detail-benefits .service-benefit-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  align-items: stretch !important;
+  gap: clamp(28px, 5vw, 64px) !important;
+}
+
+.service-details-page .service-detail-benefits .service-benefit-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  justify-content: center !important;
+  min-width: 0;
+}
+
+.service-details-page .service-detail-benefits .service-benefit-copy h2,
+.service-details-page .service-detail-benefits .service-benefit-copy p {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.service-details-page .service-detail-benefits .service-benefit-copy p {
+  max-width: 560px;
+}
+
+.service-details-page .service-detail-benefits .service-benefit-copy:after {
+  display: none !important;
+}
+
+.service-details-page .service-detail-benefits .service-benefit-layout:after {
+  content: "";
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  min-height: 360px;
+  height: 100%;
+  border-radius: 20px;
+  background: url('https://i.pinimg.com/736x/07/79/8b/07798bee39e084c69b1feb420057f423.jpg') center / cover no-repeat;
+  box-shadow: 0 14px 34px rgba(20, 35, 50, .14);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.service-details-page .service-detail-benefits .service-benefit-layout:hover:after {
+  transform: scale(1.015);
+  filter: saturate(1.08);
+}
+
+.service-details-page .service-detail-benefits .service-benefit-list {
+  display: none !important;
+}
+
+/* Give the service-details CTA a light, calm background. */
+.service-details-page .service-detail-cta {
+  background: #f2f6f7 !important;
+  color: #183544 !important;
+  border-top: 1px solid rgba(58, 107, 140, .12);
+}
+
+.service-details-page .service-detail-cta h2,
+.service-details-page .service-detail-cta p {
+  color: #183544 !important;
+}
+
+.service-details-page .service-detail-cta .btn {
+  box-shadow: 0 8px 22px rgba(24, 53, 68, .10);
+}
+
+@media (max-width: 768px) {
+  .service-details-page .service-detail-benefits .service-benefit-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .service-details-page .service-detail-benefits .service-benefit-copy {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .service-details-page .service-detail-benefits .service-benefit-layout:after {
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 240px;
+    height: 240px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-details-page .service-detail-benefits .service-benefit-layout:after {
+    transition: none !important;
+  }
+}
